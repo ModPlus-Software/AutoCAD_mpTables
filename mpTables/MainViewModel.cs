@@ -555,7 +555,7 @@
             {
                 var ofd = new System.Windows.Forms.OpenFileDialog
                 {
-                    Filter = Language.GetItem(LangItem, "h33") + " (*.DWG)|*.DWG",
+                    Filter = $"{Language.GetItem(LangItem, "h33")} (*.DWG)|*.DWG",
                     CheckFileExists = true,
                     CheckPathExists = true,
                     Multiselect = false,

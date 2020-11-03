@@ -1,7 +1,6 @@
 ﻿namespace mpTables
 {
     using Autodesk.AutoCAD.Runtime;
-    using ModPlusAPI;
     using AcApp = Autodesk.AutoCAD.ApplicationServices.Core.Application;
 
     /// <summary>
@@ -18,8 +17,10 @@
         [CommandMethod("ModPlus", "mpTables", CommandFlags.Modal)]
         public void Main()
         {
-            Statistic.SendCommandStarting(new ModPlusConnector());
-            
+#if !DEBUG
+            ModPlusAPI.Statistic.SendCommandStarting(ModPlusConnector.Instance);
+#endif
+
             if (_mainWindow == null)
             {
                 _mainWindow = new MainWindow();

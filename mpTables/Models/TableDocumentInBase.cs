@@ -1,8 +1,5 @@
 ﻿namespace mpTables.Models
 {
-    using System;
-    using System.Windows.Media.Imaging;
-
     /// <summary>
     /// Класс описывает документ в базе (то, что в xml-файле)
     /// </summary>
